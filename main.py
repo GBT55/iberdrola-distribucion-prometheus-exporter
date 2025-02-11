@@ -40,7 +40,7 @@ class IberdrolaDistribucionMetrics:
                 watt = mea["consumption"]
                 kwh = mea["meter"]
                 self.consumption.set(watt)
-                self.meter_total.set(kwh)
+                # self.meter_total.set(kwh)
                 succed = True
                 logging.debug("Consumption: %sW, Meter: %skWh", watt, kwh)
             except IberException:

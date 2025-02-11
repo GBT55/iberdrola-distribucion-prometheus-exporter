@@ -1,5 +1,7 @@
 # Iberdrola distribución - Prometheus Exporter
 
+[![Docker](https://github.com/GBT55/iberdrola-distribucion-prometheus-exporter/actions/workflows/docker-publish.yml/badge.svg)](https://github.com/GBT55/iberdrola-distribucion-prometheus-exporter/actions/workflows/docker-publish.yml)
+
 Prometheus exporter for Iberdrola distribución.
 It provides current consumption data and the total consumption for the meter.
 
