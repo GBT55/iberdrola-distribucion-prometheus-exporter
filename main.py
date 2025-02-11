@@ -10,18 +10,18 @@ from prometheus_client import Gauge, start_http_server
 class IberdrolaDistribucionMetrics:
     def __init__(self, username, password) -> None:
         # Iberdrola Client
-        # self.conn = Iber()
-        # self.conn.login(username, password)
+        self.conn = Iber()
+        self.conn.login(username, password)
         logging.info("Logged in")
         # Prometheus metrics config
         # Hardcoded value, it is working fine until now
         # Prometheus metrics
-        # self.consumption = Gauge(
-        #     "iberdrola_distribucion_consumption", "Current consumption in watts"
-        # )
-        # self.meter_total = Gauge(
-        #     "iberdrola_distribucion_meter_total", "Total consumption in kWh"
-        # )
+        self.consumption = Gauge(
+            "iberdrola_distribucion_consumption", "Current consumption in watts"
+        )
+        self.meter_total = Gauge(
+            "iberdrola_distribucion_meter_total", "Total consumption in kWh"
+        )
         logging.info("Prometheus metrics created")
         self.polling_interval_seconds = 10 * 60 # 10 Minutes to avoid user ban (Maybe 2 are enough)
         logging.info("Polling interval set to %s seconds", self.polling_interval_seconds)
