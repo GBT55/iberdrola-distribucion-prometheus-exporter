@@ -19,9 +19,9 @@ class IberdrolaDistribucionMetrics:
         self.consumption = Gauge(
             "iberdrola_distribucion_consumption", "Current consumption in watts"
         )
-        self.meter_total = Gauge(
-            "iberdrola_distribucion_meter_total", "Total consumption in kWh"
-        )
+        # self.meter_total = Gauge(
+        #     "iberdrola_distribucion_meter_total", "Total consumption in kWh"
+        # )
         logging.info("Prometheus metrics created")
         self.polling_interval_seconds = 10 * 60 # 10 Minutes to avoid user ban (Maybe 2 are enough)
         logging.info("Polling interval set to %s seconds", self.polling_interval_seconds)
