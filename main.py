@@ -44,8 +44,8 @@ class IberdrolaDistribucionMetrics:
                 succed = True
                 logging.debug("Consumption: %sW, Meter: %skWh", watt, kwh)
             except IberException:
-                logging.debug("Error fetching data, retrying in 2 minutes")
-                time.sleep(2 * 60)
+                logging.debug("Error fetching data, retrying in 10 minutes")
+                time.sleep(10 * 60)
             except Exception as e:
                 logging.error("Error fetching data: %s", e)
                 logging.debug("Error fetching data, retrying in 10 minutes")
